@@ -1,0 +1,36 @@
+<template name='layout'>
+	<div class="container-fluid">
+		<div class="row rafter">
+			<div class="col-sm-3 raf1">
+			</div>
+			<div class="col-sm-1 raf2">
+			</div>
+			<div class="col-sm-1 raf3">
+			</div>
+			<div class="col-sm-1 raf4">
+			</div>
+			<div class="col-sm-1 raf5">
+			</div>
+			<div class="col-sm-1 raf6">
+			</div>
+			<div class="col-sm-1 raf7">
+			</div>
+			<div class="col-sm-3 raf8">
+			</div>
+		</div>
+		<div class="row infoPanel">
+			<div class="col-sm-2 barCase">
+				{{> sidebar}}
+			</div>
+			<div class="col-sm-1 hidBar">
+				<div class="row curveBar">
+				</div>
+			</div>
+			<div class="col-sm-9">
+				<div class="main">
+					{{> yield}}
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

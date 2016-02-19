@@ -1,0 +1,259 @@
+@import url(https://fonts.googleapis.com/css?family=Homenaje);
+
+$font-stack: "Homenaje", sans-serif;
+
+body {
+	background-color: black;
+	font-family: $font-stack;
+	font-variant: small-caps;
+	letter-spacing: .125px;
+	color: black;
+}
+
+//RAFTER
+
+.rafter {
+	margin: 10px auto 0px auto;
+}
+
+.raf {
+	height: 20px;
+}
+
+.raf1 {
+	@extend .raf;
+	background-color: #CC99CC;
+	border-radius: 25px 0px 0px 0px;
+}
+
+.raf2 {
+	@extend .raf;
+	background-color: #CC6666}
+
+.raf3 {
+	@extend .raf;
+	background-color: #CC6666;
+}
+
+.raf4 {
+	@extend .raf;
+	background-color: #CC6666;
+}
+
+.raf5 {
+	@extend .raf;
+	background-color: #CC6666;
+}
+
+.raf6 {
+	@extend .raf;
+	background-color: #CC6666;
+}
+
+.raf7 {
+	@extend .raf;
+	background-color: #CC6666;
+}
+
+.raf8 {
+	@extend .raf;
+	background-color: #CC99CC;
+}
+
+//INFOPANEL
+.infoPanel {
+	margin: 0px auto;
+
+}
+
+//SIDEBAR
+
+.barCase {
+ margin: 0px auto;
+
+}
+
+.space {
+	height: 5px;
+}
+
+.bar {
+	height: 50px;
+	p {
+		text-transform: uppercase;
+		font-weight: bold;
+		text-align: center;
+		margin: 10px auto auto;
+		font-size: 30px;
+		line-height: 93%;
+	}
+}
+
+.b1 {
+	@extend .bar;
+	height: 40px;
+	background-color: #CC99CC;
+	p {
+		font-size: 28px;
+		margin: 5px auto;
+	}
+}
+//hidden bar creating curve
+.hidBar {
+	background-color: #CC99CC;
+}
+.curveBar {
+ background-color: black;
+ height: 40px;
+ border-radius: 28px 0px 0px 0px;
+}
+
+.b2 {
+	@extend .bar;
+	background-color: #9999CC;
+	p {
+		font-size: 38px;
+		letter-spacing: 5px;
+	}
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+.b5 {
+	@extend .bar;
+	background-color: #CC6666;
+}
+
+.b6 {
+	@extend .bar;
+	background-color: #CC6699;
+}
+
+.b7 {
+	@extend .bar;
+	background-color: #9999FF;
+}
+
+.b8 {
+	@extend .bar;
+	background-color: #FF9966;
+}
+
+.b9 {
+	@extend .bar;
+	background-color: #FFCC99;
+}
+
+//MAIN
+.main {
+
+}
+
+.alarmInfo {
+	margin-top: 40px;
+	height: 30px;
+	border-radius: 25px;
+	background-color: #FF0000;
+	p {
+		color: black;
+		font-size: 20px;
+		text-align: center;
+		letter-spacing: 2px;
+		word-spacing: 5px;
+	}
+}
+
+.dateInfo {
+	text-align: right;
+	h1 {
+		color: #FFFF99;
+		font-size: 70px;
+		word-spacing: 15px;
+		letter-spacing: 1px;
+	}
+}
+
+.timeStamp {
+	text-align: left;
+	vertical-align: bottom;
+	h1 {
+
+		color: #FFFF99;
+		font-size: 170px;
+		letter-spacing: .25px;
+		word-spacing: 1px;
+		line-height: 90%;
+	}
+}
+
+.blip {
+	background-color: #9999CC;
+	border-radius: 25px 0px 0px 25px;
+	margin: 8px 0px auto auto;
+	height: 40px;
+	text-align: center;
+	h3 {
+		margin-top: 8px;
+		color: #FFFF99;
+	}
+}
+
+.blip1 {
+	@extend .blip;
+	background-color: #9999CC;
+	h3 {
+	}
+}
+
+.blip2 {
+	@extend .blip;
+	background-color: #9999FF;
+	h3 {
+	}
+}
+
+.blip3 {
+	@extend .blip;
+
+}
+
+.blip4 {
+	@extend .blip;
+	background-color: #9999FF;
+}
+
+//New Alarm
+
+.alarmSet {
+	p {
+		font-size: 75px;
+		color: #FFFF99;
+	}
+	h3 {
+		color: #FFFF99;
+	}
+}
+
+.hourSet {
+	width: auto;
+}
+
+
+
+
