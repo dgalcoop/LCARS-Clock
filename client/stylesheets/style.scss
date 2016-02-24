@@ -1,5 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Homenaje);
+@import "/{meta:susy}/susy";
 
+// Configuring Susy Defaults
+$susy: (
+	columns: 12,
+);
+
+//Add clearfix for container class
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+//Font Type
 $font-stack: "Homenaje", sans-serif;
 
 body {
@@ -10,10 +26,19 @@ body {
 	color: black;
 }
 
-//RAFTER
+h3 {
+	color: #FFFF99;
+}
 
+//Designate susy container
+.container {
+	@include container;
+	@extend .clearfix;
+}
+
+//RAFTER
 .rafter {
-	margin: 10px auto 0px auto;
+	@extend .clearfix;
 }
 
 .raf {
@@ -24,61 +49,63 @@ body {
 	@extend .raf;
 	background-color: #CC99CC;
 	border-radius: 25px 0px 0px 0px;
+	@include span(3 of 12);
 }
 
 .raf2 {
 	@extend .raf;
-	background-color: #CC6666}
+	background-color: #CC6666;
+	@include span(1 of 12);
+}
 
 .raf3 {
 	@extend .raf;
 	background-color: #CC6666;
+	@include span(1 of 12);
 }
 
 .raf4 {
 	@extend .raf;
 	background-color: #CC6666;
+	@include span(1 of 12);
 }
 
 .raf5 {
 	@extend .raf;
 	background-color: #CC6666;
+	@include span(1 of 12);
 }
 
 .raf6 {
 	@extend .raf;
 	background-color: #CC6666;
+	@include span(1 of 12);
 }
 
 .raf7 {
 	@extend .raf;
 	background-color: #CC6666;
+	@include span(1 of 12);
 }
 
 .raf8 {
 	@extend .raf;
 	background-color: #CC99CC;
-}
-
-//INFOPANEL
-.infoPanel {
-	margin: 0px auto;
-
+	@include span(3 of 12 last);
 }
 
 //SIDEBAR
 
 .barCase {
- margin: 0px auto;
-
+ 	@extend .clearfix;
+ 	@include span(3 of 12);
 }
 
-.space {
-	height: 5px;
-}
 
 .bar {
 	height: 50px;
+	@include span(3 of 3);
+	margin-bottom: gutter(8);
 	p {
 		text-transform: uppercase;
 		font-weight: bold;
@@ -98,15 +125,6 @@ body {
 		margin: 5px auto;
 	}
 }
-//hidden bar creating curve
-.hidBar {
-	background-color: #CC99CC;
-}
-.curveBar {
- background-color: black;
- height: 40px;
- border-radius: 28px 0px 0px 0px;
-}
 
 .b2 {
 	@extend .bar;
@@ -119,6 +137,7 @@ body {
 
 a:hover {
 	text-decoration: none;
+	color: black;
 }
 
 a {
@@ -160,16 +179,21 @@ a:link {
 	background-color: #FFCC99;
 }
 
-//MAIN
-.main {
+//INFOPANEL
+.infoPanel {
+	margin: 0px auto;
+}
 
+.main {
+		@include span(9 last);
 }
 
 .alarmInfo {
-	margin-top: 40px;
+	margin-top: 10px;
 	height: 30px;
 	border-radius: 25px;
 	background-color: #FF0000;
+	@include span(2 of 9);
 	p {
 		color: black;
 		font-size: 20px;
@@ -189,17 +213,25 @@ a:link {
 	}
 }
 
-.timeStamp {
-	text-align: left;
-	vertical-align: bottom;
-	h1 {
+.timeDeets {
+	@extend .clearfix;
+	@include span(12 of 12)
+}
 
+.timeStamp {
+	@include span(9 of 12);
+	h1 {
 		color: #FFFF99;
 		font-size: 170px;
 		letter-spacing: .25px;
 		word-spacing: 1px;
 		line-height: 90%;
+		margin-top: 0px;
 	}
+}
+
+.blipList {
+	@include span(3 of 12 last);
 }
 
 .blip {
@@ -208,24 +240,20 @@ a:link {
 	margin: 8px 0px auto auto;
 	height: 40px;
 	text-align: center;
+	@include span(1 of 1);
 	h3 {
 		margin-top: 8px;
-		color: #FFFF99;
 	}
 }
 
 .blip1 {
 	@extend .blip;
 	background-color: #9999CC;
-	h3 {
-	}
 }
 
 .blip2 {
 	@extend .blip;
 	background-color: #9999FF;
-	h3 {
-	}
 }
 
 .blip3 {
@@ -233,27 +261,36 @@ a:link {
 
 }
 
-.blip4 {
-	@extend .blip;
-	background-color: #9999FF;
-}
 
 //New Alarm
 
-.alarmSet {
+.alarmSetHeader {
 	p {
-		font-size: 75px;
-		color: #FFFF99;
-	}
-	h3 {
+		font-size: 65px;
 		color: #FFFF99;
 	}
 }
+
 
 .hourSet {
-	width: auto;
+	select {
+		width: auto;
+	}
 }
 
+.minuteSet {
+	select {
+		width: auto;
+	}
+}
+
+.setAlarm {
+	margin-top: 30px;
+}
+
+.cancelAlarm {
+	margin-top: 10px;
+}
 
 
 
